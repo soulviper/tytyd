@@ -20,7 +20,7 @@ try:
         if t == '\n':
             os.system('clear')
         else:
-            '' += t
+              
             sys.stdout.write(f"{''}    \r")
             time.sleep('0.1')
     print('\tScript ini membutuhkan data login akun anda\n    \tuntuk dapat mengedit value pada akun anda\n    \tjika anda tidak setuju maka tinggalkan script ini\n    ')
@@ -85,8 +85,7 @@ try:
                     else:
                         data['mode'] = '1'
                         data['kodewarna'] = ['255', '0', '0']
-            '' += color(huruf, fore=(data['kodewarna']['0'], data['kodewarna']['1'], data['kodewarna']['2']), back=('0', '0', '0'))
-            kodas = []
+            
             for t in range('3'):
                 if len(hex(data['kodewarna'][t])['2':]) == '1':
                     hex(data['kodewarna'][t])['2':] += '0'
@@ -107,13 +106,13 @@ try:
                 clrcode2 = int(clrcode2, '16')
                 clrcode3 = int(clrcode3, '16')
                 clrVnama['0'] += color(clrx['7':'8'], fore=(clrcode1, clrcode2, clrcode3), back=('0', '0', '0'))
-            if False:
-        clrVnama['0'] += clrVnama[len(clrVnama) - '1']['8':len(clrVnama[len(clrVnama) - '1'])]
+            
+
         return clrVnama['0']
 
     def warna(wna, text):
-        for i in text:
-            '' += wna + i
+        
+            
         return dispwarna('')
     inp = input('apakah anda setuju?\nketik y jika setuju\nketik n jika tidak setuju\npilihan :')
     if inp.lower() != 'y':
@@ -200,8 +199,8 @@ try:
             ress = json.loads(req.text)
             resss = json.loads(ress['result'])
             datacar = {}
-            for '1' in range(len(resss)):
-                datacar[resss['1']['CarID']] = {'data': resss['1']}
+            
+                
             dat['datacar'] = datacar
             return True
         return False
@@ -393,9 +392,9 @@ try:
                             print(f"{warna('[00ffff]', '>>>>>>>>>>>>>>>>>>> Upgrade Achievements')}")
                             contoh = {'t_distance': '10000', 'time': '30000', 'speed_banner': '1000', 'gifts': '100', 'treasure': '100', 'cars': '137', 'race_win': '1000', 'levels': '82', 'drift': '1000', 'run': '500', 'police': '1000', 'block_post': '1000', 'real_estate': '12', 'fuel': '10000', 'car_trade': '100', 'car_exchange': '100', 'burnt_tire': '100', 'car_fix': '100', 'car_wash': '100', 'offroad': '1000', 'passanger_distance': '1000', 'reactions': '2000', 'drift_max': '1000', 'taxi': '1000', 'delivery': '1000', 'cargo': '1000', 'push_ups': '957', 'slicer_cut': '1', 'car_collided': '1', 'new_type': '0'}
                             isidata = {'RatingData': {}}
-                            for x in contoh:
-                                print(f'{'1'}. {x}')
-                                '1' += '1'
+                           
+                                
+                               
                             print(warna('[00ffff]', '\tSAVE = q'))
                             while True:
                                 while True:
@@ -412,7 +411,7 @@ try:
                                 for x in contoh:
                                     if int(inp.split(' ')['0']) == '1':
                                         isidata['RatingData'][x] = int(inp.split(' ')['1'])
-                                    '1' += '1'
+                                    
                                 print(json.dumps(isidata, indent='2'))
                             if SetUserRatingCall(isidata) == True:
                                 print(f"{warna('[00ff00]', 'Success')}")
@@ -434,7 +433,7 @@ try:
                             print(warna('[FF0000]', 'Regist your Email into VIP First'))
                     elif pil.lower() == 'csc':
                         try:
-                            '\tScript ini membutuhkan data login akun anda\n    \tuntuk dapat mengedit value pada akun anda\n    \tjika anda tidak setuju maka tinggalkan script ini\n    ' = TestGetAllCars()
+                             
                             for idcar in dat['datacar']:
                                 print(warna('[00FFFF]', '------------------------'))
                                 spek = []
@@ -480,7 +479,7 @@ try:
                             print(f'Error : {e}')
                     elif pil.lower() == 'mc':
                         if dat['grant'] == 'Vip':
-                            '\tScript ini membutuhkan data login akun anda\n    \tuntuk dapat mengedit value pada akun anda\n    \tjika anda tidak setuju maka tinggalkan script ini\n    ' = TestGetAllCars()
+                            
                             for idcar in dat['datacar']:
                                 print(warna('[00FFFF]', '------------------------'))
                                 spek = []
@@ -514,7 +513,7 @@ try:
                             print(warna('[FF0000]', 'Regist your Email into VIP First'))
                     elif pil.lower() == 'rmc':
                         if dat['grant'] == 'Vip':
-                            '\tScript ini membutuhkan data login akun anda\n    \tuntuk dapat mengedit value pada akun anda\n    \tjika anda tidak setuju maka tinggalkan script ini\n    ' = TestGetAllCars()
+                            
                             for idcar in dat['datacar']:
                                 print(warna('[00FFFF]', '------------------------'))
                                 spek = []
@@ -547,7 +546,7 @@ try:
                             print(warna('[FF0000]', 'Regist your Email into VIP First'))
                     elif pil.lower() == 'csac':
                         if dat['grant'] == 'Vip':
-                            '\tScript ini membutuhkan data login akun anda\n    \tuntuk dapat mengedit value pada akun anda\n    \tjika anda tidak setuju maka tinggalkan script ini\n    ' = TestGetAllCars()
+                            
                             hp = input('HP       : ')
                             ihp = input('Inner HP : ')
                             nm = input('NM       : ')
@@ -583,7 +582,7 @@ try:
                     elif pil.lower() == 'ccac':
                         if dat['grant'] == 'Vip':
                             pil = input('1. Chrome ON\n2. Chrome OFF\npilihan : ')
-                            '\tScript ini membutuhkan data login akun anda\n    \tuntuk dapat mengedit value pada akun anda\n    \tjika anda tidak setuju maka tinggalkan script ini\n    ' = TestGetAllCars()
+                            
                             print(warna('[00FFFF]', '------------------------'))
                             for idpil in dat['datacar']:
                                 try:
