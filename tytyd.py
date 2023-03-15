@@ -70,7 +70,7 @@ def generateNamaWarna():
                 else:
                     data['mode'] = '1'
                     data['kodewarna'] = ['255', '0', '0']
-        '' += color(huruf, fore=(data['kodewarna']['0'], data['kodewarna']['1'], data['kodewarna']['2']), back=('0', '0', '0'))
+        '' += color(huruf, fore=(data['kodewarna'][0], data['kodewarna'][1], data['kodewarna'][2]), back=(0, 0, 0))
         kodas = []
         for t in range('3'):
             if len(hex(data['kodewarna'][t])['2':]) == '1':
