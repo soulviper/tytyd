@@ -4,10 +4,10 @@ import random
 from colr import color
 import json
 print(f"This Version is {'4.1'}")
-if httpx.get('https://raw.githubusercontent.com/atr19love/rilis/master/versi.txt').text != '4.1':
-    with open('topixsb.py', 'w') as file1:
-        file1.write(httpx.get('https://raw.githubusercontent.com/atr19love/rilis/master/topixsb.py').text)
-    print(f"Updateing TopixSB Termux Tools {httpx.get('https://raw.githubusercontent.com/atr19love/rilis/master/versi.txt').text} Version")
+if httpx.get('https://raw.githubusercontent.com/soulviper/tytyd/main/versi.txt').text != '4.1':
+    with open('tytyd.py', 'w') as file1:
+        file1.write(httpx.get('https://raw.githubusercontent.com/soulviper/tytyd/main/tytyd.py').text)
+    print(f"Updateing TopixSB Termux Tools {httpx.get('https://raw.githubusercontent.com/soulviper/tytyd/main/versi.txt').text} Version")
     exit()
 
 def generateNamaWarna():
