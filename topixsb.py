@@ -1,7 +1,6 @@
 #!usr/bin/python
 
 import os, time, sys
-import httpx
 import random
 import json
 
