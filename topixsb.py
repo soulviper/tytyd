@@ -19,6 +19,10 @@ def login():
         ress = json.loads(req.text)
         dat['idToken'] = ress['idToken']
         dat['login'] = True
+        uri = f'https://topixsb.herokuapp.com/piaipicek'
+        para = {'email': email}
+        reqgrant = httpx.post(uri, params=para)
+        dat['grant'] = reqgrant.text
     return False
 
 def getAccountInfo():
