@@ -73,7 +73,19 @@ def SetUserRatingCall(isidata):
     return False
     
             
+def warna(wna, text):
+    for i in text:
+        '' += wna + i
+    return dispwarna('')
+
+def clear():
+    try:
+        os.system('cls')
+        os.system('clear')
+    except:
+        pass
 while True:
+    print(warna('[00ff00]', '----------------------------------'))
     if dat['login'] == False:
         login()
     else:
@@ -84,8 +96,25 @@ while True:
             print(f"Welcome {dispwarna(dat['player']['Name'])}")
         except:
             print(f"Welcome {dat['player']['Name']}")
-while True:
-            menus = f"\n            [ Your access is {dat['grant']}]\nenter\t: {warna('[00FFFF]', 'Show player information')}\nirk\t: {warna('[FFD700]', 'Instan King Rank')}\nua\t: {warna('[FFD700]', 'Upgrade Archivments')}\ncid\t: {warna('[FFD700]', 'Change ID')}\ncc\t: {warna('[FFD700]', 'Change Coin')}\ncn\t: {warna('[00FFFF]', 'Change Name')}\ncrn\t: {warna('[00FFFF]', 'Change Money')}\nuhh\t: {warna('[00FFFF]', 'Unlock Honking Horn')}\nq\t: exit\n\nNote : {warna('[FFD700]', 'Gold')} only for VIP user\nSubsribe DPRLynX\nPowered by @DPR_LynX\n"
+        while True:
+            menus = f"\n            [ Your access is {dat['grant']}]\nenter\t: {warna('[00FFFF]', 'Show player information')}\nirk\t: {warna('[FFD700]', 'Istant King Rank')}\nua\t: {warna('[FFD700]', 'Upgrade Archivments')}\ncid\t: {warna('[FFD700]', 'Change ID')}\ncc\t: {warna('[FFD700]', 'Change Coin')}\ncn\t: {warna('[00FFFF]', 'Change Name')}\ncrn\t: {warna('[00FFFF]', 'Change Rainbow Name')}\ncm\t: {warna('[00FFFF]', 'Change Money')}\nuhh\t: {warna('[00FFFF]', 'Unlock Honking Horn')}\nq\t: exit\n\nNote : {warna('[FFD700]', 'Gold')} only for VIP user\nSubsribe TopixSB & Drag Channel\nPowered by TopixSB and Drag Channel Family\n"
             pil = input(f'{menus}\nchoice : ')
             if pil.lower() == 'q':
                 exit()
+            if pil == '' or pil.lower() == 'enter':
+                clear()
+                print(f"{warna('[00ffff]', '>>>>>>>>>>>>>>>>>>> Show player information')}")
+                xinfo = GetPlayerRecords()
+                if '[' in dat['player']['Name']:
+                    try:
+                        print(f"{warna('[00ff00]', 'Name')}\t: {dispwarna(dat['player']['Name'])}")
+                    except:
+                        print(f"{warna('[00ff00]', 'Name')}\t: {dat['player']['Name']} ")
+                else:
+                    print(f"{warna('[00ff00]', 'Name')}\t: {dat['player']['Name']} ")
+                print(f"{warna('[00ff00]', 'ID')}\t: {xinfo['localID']}")
+                print(f"{warna('[00ff00]', 'Money')}\t: {xinfo['money']}")
+                print(f"{warna('[00ff00]', 'Coin')}\t: {xinfo['coin']}")
+            elif pil.lower() == 'cid':
+                if dat['grant'] == 'Vip':
+                    clear()
